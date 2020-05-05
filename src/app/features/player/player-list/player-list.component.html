@@ -1,18 +1,8 @@
 <div class="Player-list">
     <p>Players : </p>
-    <ul>
+    <ul *ngFor="let player of players; let i=index">
         <li>
-            <span (click)="selectPlay(0)"> {{players[0].characterName}}</span>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <span (click)="selectPlay(1)"> {{players[1].characterName}}</span>
-        </li>
-    </ul>
-    <ul>
-        <li>
-            <span (click)="selectPlay(2)"> {{players[2].characterName}}</span>
+            <span (click)="selectPlay(i)"> {{player.characterName}}</span>
         </li>
     </ul>
 </div>

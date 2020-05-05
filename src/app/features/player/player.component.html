@@ -1,2 +1,2 @@
 <app-player-list [players]="players" (onSelect)="selectPlay($event)"></app-player-list>
-<app-player-details [selected]="selected"></app-player-details>
+<app-player-details *ngIf="selected" [selected]="selected"></app-player-details>
