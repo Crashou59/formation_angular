@@ -8,13 +8,12 @@ import { HeaderComponent } from './features/header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
-  ],
+    HeaderComponent],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
