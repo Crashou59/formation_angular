@@ -1,4 +1,4 @@
-<div className="Player-details">
+<div className="Player-details" [style.background-color]="selected.sexe === 'F' ? 'pink' : 'cadetblue'">
     <p> Character name : {{selected?.characterName}} </p>
     <p> Name : {{selected?.name}}</p>
     <p> Class : {{selected?.class}}</p>
