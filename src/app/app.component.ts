@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'formation-app';
+  nickname = 'toto';
+
+  changeNickname(nickname: string) {
+    this.nickname = nickname;
+  }
 }

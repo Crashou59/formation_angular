@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -10,9 +11,17 @@ export class HeaderComponent implements OnInit {
   @Input()
   nickname = '';
 
+  @Output()
+  changeEvent = new EventEmitter();
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  changeNickname() {
+    console.log('click');
+    this.changeEvent.emit('titi');
   }
 
 }
