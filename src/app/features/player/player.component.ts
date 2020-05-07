@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from './player.model';
 import { PlayerService } from './player.service';
+import { PlayerSubService } from 'src/app/shared/services/player-sub.service';
 
 @Component({
   selector: 'app-player',
@@ -13,7 +14,7 @@ export class PlayerComponent implements OnInit {
 
   selected: Player;
 
-  constructor(private playerService: PlayerService) { }
+  constructor(private playerService: PlayerService, private playerSubService: PlayerSubService) { }
 
   ngOnInit(): void {
     this.playerService.getPlayers().subscribe(
@@ -22,6 +23,7 @@ export class PlayerComponent implements OnInit {
 
   selectPlay(index: number): void {
     this.selected = this.players[index];
+    this.playerSubService.selectPlayerName(this.selected.characterName);
   }
 
 }

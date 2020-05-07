@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { PlayerSubService } from 'src/app/shared/services/player-sub.service';
 
 
 @Component({
@@ -14,9 +15,13 @@ export class HeaderComponent implements OnInit {
   @Output()
   changeEvent = new EventEmitter();
 
-  constructor() { }
+  constructor(private playerSubService: PlayerSubService) {
+
+  }
 
   ngOnInit(): void {
+    this.playerSubService.$obsPlayer.subscribe((name: string) =>
+      this.nickname = name);
   }
 
   changeNickname() {
