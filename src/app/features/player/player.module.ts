@@ -15,7 +15,7 @@ import { SexPipe } from 'src/app/shared/pipes/sex.pipe';
     SexPipe
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     PlayerComponent
