@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PlayerComponent } from './player.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { PlayerDetailsComponent } from './player-details/player-details.component';
+import { SexPipe } from 'src/app/shared/pipes/sex.pipe';
 
 
 
@@ -10,7 +11,8 @@ import { PlayerDetailsComponent } from './player-details/player-details.componen
   declarations: [
     PlayerComponent,
     PlayerListComponent,
-    PlayerDetailsComponent
+    PlayerDetailsComponent,
+    SexPipe
   ],
   imports: [
     CommonModule
