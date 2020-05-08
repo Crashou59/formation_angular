@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './features/header/header.component';
 import { PlayerModule } from './features/player/player.module';
 import { LoginModule } from './features/login/login/login.module';
+import { SubscribePlayerModule } from './features/subscribe-player/subscribe-player.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { LoginModule } from './features/login/login/login.module';
     BrowserModule,
     AppRoutingModule,
     PlayerModule,
-    LoginModule
+    LoginModule,
+    SubscribePlayerModule
   ],
   providers: [],
   bootstrap: [AppComponent],

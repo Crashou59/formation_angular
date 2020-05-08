@@ -1,0 +1,29 @@
+<form [formGroup]="subPlayerForm" (ngSubmit)="onSubmit()">
+    <label>
+        Character Name:
+        <input type="text" formControlName="characterName">
+    </label>
+
+    <label>
+        Name:
+        <input type="text" formControlName="name">
+    </label>
+    <label>
+        Class:
+        <select formControlName="class">
+            <option value="Guerrier">Guerrier</option>
+            <option value="Rodeur">Rodeur</option>
+            <option value="Mage">Mage</option>
+        </select>
+
+    </label>
+    <label>
+        Race:
+        <select formControlName="race">
+            <option value="Humain">Humain</option>
+            <option value="Elf">Elf</option>
+            <option value="Nain">Nain</option>
+        </select>
+    </label>
+    <button type="submit">Submit</button>
+</form>

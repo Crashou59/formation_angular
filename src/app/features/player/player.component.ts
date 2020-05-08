@@ -19,6 +19,9 @@ export class PlayerComponent implements OnInit {
   ngOnInit(): void {
     this.playerService.getPlayers().subscribe(
       (players) => this.players = players)
+    this.playerSubService.$obsAddPlayer.subscribe(
+      (player) => this.players.push(player)
+    );
   }
 
   selectPlay(index: number): void {
