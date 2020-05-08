@@ -44,6 +44,7 @@ export class PlayerService {
   constructor() { }
 
   getPlayers(): Observable<Player[]> {
+    console.log('getPlayers', this.players)
     return of(this.players);
   }
 }

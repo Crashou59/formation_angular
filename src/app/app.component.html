@@ -1,4 +1,13 @@
-<app-login></app-login>
-<app-header [nickname]="nickname" (changeEvent)="changeNickname($event)"></app-header>
-<app-player></app-player>
-<app-subscribe-player></app-subscribe-player>
+<ul>
+    <li>
+        <span routerLink="/players" routerLinkActive="active">players</span>
+    </li>
+</ul>
+<ul>
+    <li>
+        <span routerLink="/inscription" routerLinkActive="active">inscription</span>
+    </li>
+</ul>
+<div>
+    <router-outlet></router-outlet>
+</div>
